@@ -4,15 +4,15 @@ from core.copy_static import copy_static_files
 
 STATIC_DIR = "static/"
 INPUT_DIR = "posts/"
-OUTPUT_DIR = "build/posts/"
-INDEX_OUTPUT_PATH = "build/index.html"
+OUTPUT_DIR = "docs/posts/"
+INDEX_OUTPUT_PATH = "docs/index.html"
 TEMPLATE_PATH = "html/post_base.html"
 
 def main():
 
     print("Copying static files...")
     try:
-        copy_static_files(STATIC_DIR, "build/")
+        copy_static_files(STATIC_DIR, "docs/")
     except Exception as e:
         print(f"Erro: {e}")
 
