@@ -3,7 +3,6 @@ title: Hello World
 date: 2024-12-07 03:45:00
 tags: 
 ---
-# Hello World
 
 Hi, this is my first post on my blog, I would say that this is just a test post, so I hope everything is working correctly.
 

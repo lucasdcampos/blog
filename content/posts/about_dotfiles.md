@@ -3,7 +3,6 @@ title: About dotfiles
 date: 2024-12-07 04:42:00
 tags: linux, dotfiles
 ---
-# About dotfiles
 
 Well, a thing that always irritates me when I'm setting up a new machine or formatting my main one is configuring everything once again.
 

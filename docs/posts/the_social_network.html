@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Social Network</title>
     <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="../post.css">
+    <link rel="stylesheet" href="../sidebar.css">
 </head>
 <body>
-    <h2><a href="../index.html">~/blog/</a></h2>
-    <div class="post-holder">
-        <p>2025-02-23 11:05:00</p>
-        <p>tags: ['the social network', 'programming', 'blog', 'mark zuckerberg']</p>
-        <h1>About The Social Network</h1>
-<p>Recently I watched The Social Network, it was a college's homework, but the funny thing is that I was already planning to watch it anyway, so whatever.</p>
+    <div class="container">
+        <aside class="sidebar-left">
+    <div class="avatar-section">
+        <img src="../img/avatar.jpeg" alt="Avatar" class="avatar">
+        <p class="description">
+            Computer Science enthusiast who also likes Math, Chess, Piano,
+            Boxing and a lot of other unrelated things..
+        </p>
+    </div>
+    <nav class="navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../posts.html">Posts</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </nav>
+</aside>
+
+        <main class="main-content">
+            <h1>The Social Network</h1><p>Recently I watched The Social Network, it was a college's homework, but the funny thing is that I was already planning to watch it anyway, so whatever.</p>
 <p>I must say that it was an amazing movie, and I'll definitely rewatch it, because there are a lot of little details that you don't get on your first watch.
 I liked it because there isn't 
 a lot of movies that shows programming in a realistic way, even though this movie itself isn't focused on programming.</p>
@@ -26,13 +41,20 @@ he used real tools and terms, like some scenes of Mr. Robot.</p>
 I'll try to think at something, no need to be a bilionaire idea, just a project people can use, but this may be difficult.</p>
 <p>Well, back at the movie, a lot of it's events aren't real, I understand thats for make the story more interesting, but I don't know, I would prefer the real story. I also
 discovered that the movie is based on a book called "The Accidental Bilionaires", and I'll definitely read it at some point, I guess this one is closer to the reality.</p>
+        </main>
+
+        <aside class="sidebar-right">
+    <h3>Latest Posts</h3>
+    <ul>
+        <li><a href="#">Discussing Programming Languages</a></li>
+        <li><a href="#">The Social Network</a></li>
+        <li><a href="#">About dotfiles</a></li>
+    </ul>
+</aside>
     </div>
 
-    <footer>
-    <div class="container">
-        <p>&copy; 2024 lucasof.</p>
-    </div>
+    <footer class="footer">
+        <p>&copy; Made by lucasof</p>
 </footer>
-    
 </body>
 </html>

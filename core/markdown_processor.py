@@ -1,6 +1,7 @@
 import os
 import markdown
 import yaml
+from core.index_generator import generate_page
 from core.post import Post
 from datetime import datetime
 
@@ -24,16 +25,13 @@ def generate_post_html(post, template_path):
         post_template = template_file.read()
 
     # Replace the placeholders with the post content
-    post_html = post_template.replace("{{ post_title }}", post.title)
     post_html = post_html.replace("{{ post_content }}", post.html_content)
     post_html = post_html.replace("{{ post_date }}", str(post.post_date))
     post_html = post_html.replace("{{ post_tags }}", str(post.tags))
-    footer = open("html/footer.html", "r")
-    post_html = post_html.replace("{{ footer }}", footer.read())
+
     return post_html
 
-# Function to process the Markdown files
-def process_markdown_files(input_dir, output_dir, template_path):
+def process_posts(input_dir, output_dir, template_path):
     if not os.path.exists(input_dir):
         raise FileNotFoundError(f"The directory '{input_dir}' was not found.")
 
@@ -41,8 +39,9 @@ def process_markdown_files(input_dir, output_dir, template_path):
     posts = []
 
     for filename in os.listdir(input_dir):
-        if filename.endswith(".md"):
+        if filename.endswith(".md") and not filename.startswith("_"): # ignoring hidden posts
             md_path = os.path.join(input_dir, filename)
+
             with open(md_path, 'r', encoding='utf-8') as md_file:
                 content = md_file.read()
 
@@ -90,19 +89,10 @@ def process_markdown_files(input_dir, output_dir, template_path):
                 post_date=post_date,
             )
 
-            # Generate the final HTML using the template
-            final_html = generate_post_html(post, template_path)
-
             # Save the HTML file in the output directory
-            output_path = os.path.join(output_dir, f"{os.path.splitext(filename)[0]}.html")
-            with open(output_path, 'w', encoding='utf-8') as html_file:
-                html_file.write(final_html)
-
             posts.append(post)
 
     # Sort the posts by date (most recent first)
     posts.sort(key=lambda post: post.post_date, reverse=True)
 
     return posts
-
-

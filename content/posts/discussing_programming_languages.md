@@ -3,7 +3,6 @@ title: Discussing Programming Languages
 date: 2025-03-12 10:30:00
 tags: programming languages, libra, C#, virtual machine
 ---
-# Discussing Programming Languages
 
 "There are two types of programming languages, does everyone complain about, and the ones no one use"
 

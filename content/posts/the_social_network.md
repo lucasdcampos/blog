@@ -3,7 +3,6 @@ title: The Social Network
 date: 2025-02-23 11:05:00
 tags: the social network, programming, blog, mark zuckerberg
 ---
-# About The Social Network
 
 Recently I watched The Social Network, it was a college's homework, but the funny thing is that I was already planning to watch it anyway, so whatever.
 
